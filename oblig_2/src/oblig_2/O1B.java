@@ -27,9 +27,7 @@ public class O1B {
 			
 			for (int kollonne = 0; kollonne < matrise[rad].length; kollonne++) {
 				
-				linje += matrise[rad][kollonne] + " ";
-					
-			//	System.out.println(matrise[rad][kollonne]);
+				linje += matrise[rad][kollonne] + " ";		
 				
 		    }
 		
@@ -44,17 +42,29 @@ public class O1B {
 	
 	public static int[][] skaler(int tall, int[][] matrise){
 		
+		int[][] skalertmatrise = new int [matrise.length][matrise.length];
 		
+		for (int rad = 0; rad < skalertmatrise.length; rad++) {
+			
+			for (int kollonne = 0; kollonne < skalertmatrise[rad].length; kollonne++) {
+				
+				skalertmatrise[rad][kollonne] = matrise[rad][kollonne] * tall;
+				
+		    }
+			
+		}
+
+		return skalertmatrise;
 		
 	}
 	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+     int tall = 3;
+		int[][] matrise = {{1,2,3}, {4,5,6}, {7,8,9}};
 
-		int[][] a = {{1,2,3}, {4,5,6}, {7,8,9}};
-		System.out.println(tilStreng(a));
-		
+		System.out.println(tilStreng(matrise));
 	}
 
 }
